@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-main-bg text-main-text;
+}
+
+h1 {
+  @apply text-2xl;
+}
