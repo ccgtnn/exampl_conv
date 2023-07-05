@@ -43,7 +43,50 @@
 - Описывайте стили в файлах компонентов.
 - Общие классы описывайте в файле css/styles.css, начиная с `_`, например `h1 { @apply text-2xl; } _form { @apply sapce-y-2; }`.
 - Цвета описывайте в файле tailwind.config.js.
-- Порядок записи классов после @apply - отступы (p-2, m-2), тип отображения (flex gap-2, space-y-2), text, цвета, border, прочие классы, hover:, focus:
+
+## TAILWIND ПОРЯДОК ПОСЛЕ @APPLY
+
+- Позиционирование: Это касается свойств, влияющих на расположение элемента на странице относительно других элементов, таких как position, top, right, bottom, left, z-index.
+- Отображение и обтекание: Классы, связанные с display, visibility, float, clear, overflow.
+- Размеры и поля: Классы, связанные с width, height, margin, padding.
+- Типографика и оформление текста: Классы, влияющие на стиль текста, такие как font, line-height, text-align, color.
+- Фон: Классы, связанные с background.
+- Рамки: Классы, связанные с border, border-radius.
+- Другие стили: Все остальные стили, которые не подходят под вышеуказанные категории.
+
+.example {
+  @apply 
+  /* Позиционирование */
+  relative 
+  top-0
+  right-0 
+  z-50
+  /* Отображение и обтекание */
+  block 
+  visible 
+  float-left 
+  overflow-hidden
+  /* Размеры и поля */
+  w-full 
+  h-auto 
+  m-0 
+  p-4
+  /* Типографика и оформление текста */
+  font-bold 
+  text-lg 
+  text-center 
+  text-gray-700
+  /* Фон */
+  bg-white 
+  /* Рамки */
+  border 
+  border-gray-300 
+  rounded
+  /* Другие стили */
+  shadow-lg 
+  hover:shadow;
+}
+
 
 ## ПРАВИЛА ИМЕНОВАНИЯ ФАЙЛОВ
 
